@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Progres 2.0</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <main>
+      <div class="main-container">
+      <div class="tracker"></div>
+      <div class="sessions-container">
+
+        <% bodyPartsData.forEach((bodyPart) => { %>
+        <div class="card-container">
+          <h1><%=bodyPart.body_part%></h1>
+          <% exerciseData.forEach((exercise)=>{ if(exercise.body_part ===
+          bodyPart.body_part){ %>
+
+          <div class="row-data">
+            <p class="exercise-name"><%= exercise.exercise_name %></p>
+            <p><%= exercise.number_of_sets%></p>
+
+            <form action="/changeWeight" method="post">
+              <input
+                type="text"
+                name="NewWeight"
+                dir="rtl"
+                placeholder="<%= exercise.weight %>"
+                autocomplete="off"
+              />
+              <label for="NewWeight">kg</label>
+              <input
+                type="hidden"
+                name="exerciseId"
+                value="<%= exercise.id %>"
+              />
+            </form>
+          </div>
+
+          <%}});%>
+        </div>
+
+        <% }); %>
+      </div>
+    </div>
+    </main>
+  </body>
+</html>

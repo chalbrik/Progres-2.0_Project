@@ -1,0 +1,84 @@
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin: 100px 100px 100px 100px;
+}
+
+
+.sessions-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 10px;
+
+}
+
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+    height: 240px;
+    width: 360px;
+    background-color: rgb(242, 234, 228);
+    ;
+    border-radius: 10px;
+    margin: auto;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.card-container h1 {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 0.8rem;
+
+    margin: 0;
+}
+
+.row-data {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 20px;
+
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+    font-size: 0.8rem;
+
+
+}
+
+.row-data>p {
+    width: 150px;
+}
+
+.row-data input {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+    font-size: 0.8rem;
+
+    width: 40px;
+    background: none;
+    border: none;
+}
+
+.row-data input[type="text"]::placeholder {
+    color: black;
+}
+
+.row-data>p.exercise-name {
+    width: 130px;
+}
+
+
+.tracker {
+    height: 70px;
+    width: 60%;
+
+    background-color: gray;
+}
